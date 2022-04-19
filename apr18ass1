@@ -1,0 +1,139 @@
+import java.util.*;
+class Transaction
+{
+    static int bal=15000;
+    static void credit(int amount)
+    {
+        bal=bal+amount;
+        System.out.println("Transcaction processed successfully");
+        
+    }
+    static void debit(int amount)
+    {
+        if(amount>bal)
+        {
+        System.out.println("Insufficient balance");
+        System.out.println("try again");
+        }
+        else{
+            System.out.println("transaction processing successfully");
+            bal=bal-amount;
+        }
+}
+        static void checkbalance()
+        {
+            System.out.println("account balance" + bal);
+        
+        }
+        public static void main(String[] args)
+        {
+            int amount,op,upi;
+            Scanner sc=new Scanner(System.in);
+            System.out.println("1.phonepe\n2.googlepay\n3.amazonpay\n4.paytm");
+            upi=sc.nextInt();
+            switch(upi)
+            {
+                case 1:
+                      System. out.println(" From phonepe");
+                    System.out.println("1.credit\n2.debit\n3.checkbalance");
+                    do{
+                        System.out.println("choose your option");
+                        op=sc.nextInt();
+                        
+                        switch(op)
+                        {
+                                case 1:System.out.println("enter amount");
+                                amount=sc.nextInt();
+                                credit(amount);
+                                break;
+                                case 2:
+                                System.out.println("enter amount");
+                                amount=sc.nextInt();
+                                debit(amount);break;
+                                case 3:
+                                    checkbalance();break;
+                                    
+                        }
+}
+                        while(op<4);
+                        break;
+case 2:
+System. out.println(" From googlepay");
+
+System.out.println("1.credit\n2.debit\n3.checkbalance");
+do{
+                        System.out.println("choose your option");
+                        op=sc.nextInt();
+                        
+                        switch(op)
+                        {
+                                case 1:System.out.println("enter amount");
+                                amount=sc.nextInt();
+                                credit(amount);
+                                break;
+                                case 2:
+                                System.out.println("enter amount");
+                                amount=sc.nextInt();
+                                debit(amount);break;
+                                case 3:
+                                    checkbalance();break;
+                                    
+                        }
+}
+                        while(op<4);
+                        break;
+case 3:
+System. out.println(" From amazonpay");
+System.out.println("1.credit\n2.debit\n3.checkbalance");
+
+do{
+                        System.out.println("choose your option");
+                        op=sc.nextInt();
+                        
+                        switch(op)
+                        {
+                                case 1:System.out.println("enter amount");
+                                amount=sc.nextInt();
+                                credit(amount);
+                                break;
+                                case 2:
+                                System.out.println("enter amount");
+                                amount=sc.nextInt();
+                                debit(amount);break;
+                                case 3:
+                                    checkbalance();break;
+                                    
+                        }
+}
+                        while(op<4);
+                        break;
+case 4:
+System. out.println(" From paytm");
+
+System.out.println("1.credit\n2.debit\n3.checkbalance");
+do{
+                        System.out.println("choose your option");
+                        op=sc.nextInt();
+                        
+                        switch(op)
+                        {
+                                case 1:System.out.println("enter amount");
+                                amount=sc.nextInt();
+                                credit(amount);
+                                break;
+                                case 2:
+                                System.out.println("enter amount");
+                                amount=sc.nextInt();
+                                debit(amount);break;
+                                case 3:
+                                    checkbalance();break;
+                                    
+                        }
+}
+                        while(op<4);
+                        break;
+default:System.out.println("invalid choice") ;
+        }
+    }
+    
+}
